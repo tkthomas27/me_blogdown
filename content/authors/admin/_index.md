@@ -1,48 +1,51 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: I am a quantitative analyst focusing on consumer valuation and marketing.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: Masters of Analytics
+    institution: Georgia Tech
+    year: 2022
+  - course: Masters of Theological Studies
+    institution: Harvard Divinity School
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+  - course: BA in Philosophy and Religion
+    institution: Furman University
     year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+email: "timothykylethomas@gmail.com"
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- R-Python-SQL Data Science Stack
+- R Education
+- Data Visualization
+- Sanskrit
 organizations:
-- name: Stanford University
+- name: Bank of America
   url: ""
-role: Professor of Artificial Intelligence
+role: AVP, Quantitative Analyst
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/tkylethomas27
+# - icon: google-scholar
+#   icon_pack: ai
+#   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/tkthomas27
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/timothykylethomas/
 superuser: true
-title: Nelson Bighetti
+title: Kyle Thomas
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Kyle Thomas does data analytics for fun and data wrangling for work. He has an education in the Study of Religion<sup>TM</sup> and work experience in finance and valuation. Kyle is a huge fan of R, visualization, and solving problems using analytics. He also finds it strange talking in the third person.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Kyle is also an expert in SEO: SQL, R, Python, Machine Learning, Aritifical Intelligence (AI), Java, C++, Models, Statistics, COBOL, FORTRAN, PostgreSQL, SAS, SPSS, Data Science, Databases, Analytics, Stata
