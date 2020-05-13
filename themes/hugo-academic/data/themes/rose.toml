@@ -2,7 +2,7 @@
 name = "Rose"
 
 # Is theme light or dark?
-light = true
+light = false
 
 # Primary
 primary = "rgb(251, 191, 183)"

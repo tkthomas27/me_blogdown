@@ -5,7 +5,7 @@
 
 [[main]]
   name = " Bio"
-  url = "#hero"
+  url = "#about"
   weight = 10
   pre = "<i class='fa fa-home'></i>"
 
@@ -26,6 +26,13 @@
   weight = 40
   pre = "<i class='fa fa-book'></i>"
 
+[[main]]
+  name = " Talks"
+  url = "#talks"
+  weight = 50
+  pre = "<i class='fa fa-volume-up'></i>"
+
+
 #  [[main]]
 #   name = "Courses"
 #   url = "courses/"
@@ -38,7 +45,8 @@
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# [[main]]
-#    name = "CV"
-#    url = "files/cv.pdf"
-#    weight = 70
+[[main]]
+    name = " CV"
+    url = "files/cv.pdf"
+    weight = 70
+      pre = "<i class='fa fa-arrow-alt-circle-down'></i>"
