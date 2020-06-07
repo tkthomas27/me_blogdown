@@ -1,0 +1,68 @@
+---
+title: "Unemployment Data from FRED"
+authors:
+  - admin
+date: 2020-06-07
+summary: "Get and plot unemployment rates from FRED"
+categories: ["R Notebook"]
+tags: ["R","FRED","Economics","Data Visualization"]
+---
+
+
+
+<div id="initialize" class="section level1">
+<h1>Initialize</h1>
+<pre class="r"><code>library(tidyverse)
+library(fredr)</code></pre>
+</div>
+<div id="getting-the-data" class="section level1">
+<h1>Getting the Data</h1>
+<p>Getting data official economic data from in R is a breeze. <a href="https://fred.stlouisfed.org">FRED</a> (the St Louis Federal Reserve) has provided a handy API for getting data like unemployment.</p>
+<p>Making this process even easier is the R package <a href="https://github.com/sboysel/fredr">fredr</a> which provides convenient wrappers for pulling data.</p>
+<p>In order to get this data, you have to first get an API key from FRED. I have stored mine in the <code>.Renviron</code> file so I don’t accidentally share it when I publish my notebooks. Once you have set it up in your environment, you can use <code>Sys.getenv()</code> to set it locally and use it to pull data.</p>
+<pre class="r"><code>fred_key &lt;- Sys.getenv(&#39;FRED_API_KEY&#39;)
+
+fredr::fredr_set_key(fred_key)</code></pre>
+<p>Once you have set up your API key, you can use <code>purrr::map_dfr</code> to easily pull mutliple different series by their FRED code.</p>
+<p>Here we have pulled four series:</p>
+<ul>
+<li><code>UNRATE</code>: overall unemployment rate</li>
+<li><code>UNEMPLOY</code>: overall unemployment level</li>
+<li><code>FLUR</code>: Florida unemployment rate</li>
+<li><code>BOST625URN</code>: Boston metro area unemployment rate</li>
+</ul>
+<pre class="r"><code>unemployment_data &lt;- map_dfr(c(&quot;UNRATE&quot;,&quot;UNEMPLOY&quot;,&quot;FLUR&quot;,&quot;BOST625URN&quot;),fredr::fredr)</code></pre>
+</div>
+<div id="visualize" class="section level1">
+<h1>Visualize</h1>
+<p>Now that we have the data, we can visualize.</p>
+<pre class="r"><code>unemployment_data %&gt;% 
+  
+  # filer data 
+  filter(series_id %in% c(&quot;UNRATE&quot;,&quot;FLUR&quot;,&quot;BOST625URN&quot;)) %&gt;% 
+  filter(date &gt; as.Date(&quot;2007-01-01&quot;)) %&gt;% 
+  
+  # recode and arrange the different series variables
+  mutate(series_id = recode(series_id, &quot;BOST625URN&quot; = &quot;Boston&quot;,
+                            &quot;FLUR&quot; = &quot;Florida&quot;,
+                            &quot;UNRATE&quot; = &quot;USA&quot;)) %&gt;% 
+  mutate(series_id = factor(series_id, levels = c(&quot;Boston&quot;,&quot;Florida&quot;,&quot;USA&quot;))) %&gt;%
+  
+  # plot the data
+  ggplot(aes(x = date, y = value, 
+             color = series_id)) +
+  
+  geom_line(alpha = 0.7, size = 1.4) +
+  scale_color_manual(values = c(&quot;#00C5CD&quot;, &quot;#43CD80&quot;, &quot;#EE4000&quot;)) +
+  ggthemes::theme_fivethirtyeight() +
+  labs(color = &quot;&quot;, title = &quot;Unemployment Rate&quot;) +
+  
+  # add shaded region for great recession
+  annotate(&quot;rect&quot;, 
+           xmin = as.Date(&quot;2007-12-01&quot;), 
+           xmax = as.Date(&quot;2009-06-01&quot;), 
+           ymin = 0, 
+           ymax = 16,
+           alpha = .2)</code></pre>
+<p><img src="/post/r_notebook/fred/fred_unemp_1_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
