@@ -5,7 +5,7 @@ authors:
 categories: ["Explanatory Notes"]
 tags: ["math","statistics","regression"]
 date: 2018-07-23
-summary: "Some notes on the math behind penalized regression methods liek Ridge and LASSO"
+summary: "Some notes on the math behind penalized regression methods like Ridge and LASSO"
 ---
 
 # Ridge Regression and the Lasso

@@ -1,12 +1,12 @@
 ---
 authors:
 - admin
-bio: I am a quantitative analyst focusing on consumer valuation and marketing.
+bio: I am a quantitative analyst focusing on valuation and marketing.
 education:
   courses:
   - course: Masters of Analytics
     institution: Georgia Tech
-    year: 2022
+    year: 2021
   - course: Masters of Theological Studies
     institution: Harvard Divinity School
     year: 2012
@@ -15,14 +15,14 @@ education:
     year: 2009
 email: "timothykylethomas@gmail.com"
 interests:
-- R-Python-SQL Data Science Stack
+- R-Python-SQL
 - R Education
 - Data Visualization
 - Sanskrit
 organizations:
 - name: Bank of America
   url: ""
-role: AVP, Quantitative Analyst
+role: VP, Quantitative Analyst II
 social:
 - icon: envelope
   icon_pack: fas
@@ -47,5 +47,3 @@ user_groups:
 ---
 
 Kyle Thomas does data analytics for fun and data wrangling for work. He has an education in the Study of Religion<sup>TM</sup> and work experience in finance and valuation. Kyle is a huge fan of R, visualization, and solving problems using analytics. He also finds it strange talking in the third person.
-
-Kyle is also an expert in SEO: SQL, R, Python, Machine Learning, Aritifical Intelligence (AI), Java, C++, Models, Statistics, COBOL, FORTRAN, PostgreSQL, SAS, SPSS, Data Science, Databases, Analytics, Stata

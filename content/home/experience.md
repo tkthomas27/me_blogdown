@@ -19,12 +19,25 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "AVP, Quantitative Analyst"
+  title = "VP, Quantitative Analyst II"
+  company = "Bank of America"
+  company_url = ""
+  location = "Charlotte, NC"
+  date_start = "2020-02-01"
+  date_end = ""
+  description = """
+  Still Leveraging R-Python-SQL to drive insights into customer value and marketing effectiveness.
+  
+  Bank of America R Subject Matter Expert. President of R Learning Hive and R In House User Group.
+  """
+
+[[experience]]
+  title = "AVP, Quantitative Analyst I"
   company = "Bank of America"
   company_url = ""
   location = "Charlotte, NC"
   date_start = "2018-09-01"
-  date_end = ""
+  date_end = "2020-02-01"
   description = """
   Leverage the R-Python-SQL stack to drive insights into customer value and marketing effectiveness.
   
